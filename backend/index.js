@@ -40,8 +40,6 @@ io.on('connection', (socket) => {
             text: content?.text,
             timestamp: new Date(),
         };
-        console.log(content, "CONTENT")
-        console.log(chatMessages, "CHAT MESSAGES")
         chatMessages.push(newMessage);
         // Broadcast the new message to all connected clients
         io.emit(MESSAGE_TYPE.NEW_MESSAGE, newMessage);

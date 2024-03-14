@@ -30,7 +30,6 @@ const [isConnected, setIsConnected] = useState(false)
   }, []);
 
   const sendMessage = useCallback((content) => {
-    console.log(content, "CONETN")
     if (isConnected) {
       socket.emit(MESSAGE_TYPE.SEND_MESSAGE, content);
     }
