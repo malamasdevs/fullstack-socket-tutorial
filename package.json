@@ -1,0 +1,8 @@
+{
+    "name": "fullstack-chatapp",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "cd frontend && yarn install && yarn run build && cd ../backend && yarn install"
+    }
+  }
+  
