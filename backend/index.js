@@ -51,6 +51,12 @@ io.on('connection', (socket) => {
     });
 });
 
+// Health check route
+app.get('/healthcheck', (req, res) => {
+    res.status(200).send('Server is healthy!');
+});
+
+
 const port = process.env.PORT || 9000;
 server.listen(port, () => {
     console.log(`WebSocket server started on port ${port}`);
